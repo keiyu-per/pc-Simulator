@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#181537"><title>シミュレーター占い</title><link rel="stylesheet" href="style.css"><script defer src="engine.js"></script><script defer src="strokes.js"></script><script defer src="app.js"></script></head>
+<body><main>
+<header><p id="date"></p><h1>シミュレーター占い</h1><div class="orbit" aria-hidden="true">✦</div></header>
+<div class="cards"><section><h2><span aria-hidden="true">✧</span> 今日の星座占い</h2><label for="sign">星座</label><select id="sign"><option value="">星座を選ぶ</option></select><p id="stars" role="status">星座を選ぶと今日の運勢が表示されます。</p><button hidden id="retry">再取得</button> <a id="credit" href="https://sigastra.com/ja/">占い提供：Sigastra</a></section>
+<section><h2><span aria-hidden="true">✎</span> 名前の画数占い</h2><label for="name">姓名または名前</label><input id="name" maxlength="50" placeholder="例：山田 花子" autocomplete="off"><p id="reading" aria-live="polite"></p><small>表記した漢字の総画による独自の簡易鑑定</small></section></div>
+<section class="draw"><h2>今日の引きを占う</h2><fieldset><legend>機種</legend><div id="machines" class="choices"></div></fieldset><fieldset><legend>目標の初当たり回数</legend><div class="goals" id="goals"></div></fieldset><button id="draw" class="primary">✦　占う</button><small>同じ日・同じ条件の結果は共通です。</small></section>
+<section id="result" hidden tabindex="-1"><h2>占い結果</h2><p id="conditions"></p><strong id="rank"></strong><div class="stats"><div>通常時の回転数<b id="spins"></b></div><div>合計払出<b id="balls"></b></div></div><p id="verdict"></p><details id="breakdown"><summary>当たりの内訳</summary><ol id="events"></ol></details></section>
+<section><h2>占い履歴</h2><div id="history"></div></section><p id="storageStatus" role="status"></p></main></body></html>
